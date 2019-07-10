@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageSender"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/backsplash_white"
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/reminders_spinner"
+            android:layout_margin="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_elements">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/body_field"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:ems="10"
+            android:hint="Body"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            app:layout_constraintBottom_toTopOf="@+id/sendnotification_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:layout_margin="16dp"
+            android:id="@+id/contacts_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/contacts">
+        </Spinner>
+
+        <Button
+            android:id="@+id/sendnotification_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/oval_button_shape"
+            android:text="Send Notification"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/body_field" />
+    </LinearLayout>
+</RelativeLayout>
